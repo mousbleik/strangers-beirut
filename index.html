@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strangers · Beirut — Coffee, Matcha & Community</title>
+<meta name="description" content="A welcoming community café in Beirut where strangers become friends. Coffee · Matcha · Community.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#26321E;--matcha:#4E6B36;--matcha2:#8BA85A;--clay:#C2683C;--latte:#E4A076;--cream:#F3ECDD;--paper:#FBF8F1;--muted:#736A58;
+--serif:'Playfair Display',Georgia,'Times New Roman',serif;--sans:'Montserrat',system-ui,Arial,sans-serif;}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+.shell{max-width:1080px;margin:0 auto;padding:0 26px}
+/* HERO */
+.hero{position:relative;background:var(--ink);color:var(--cream);min-height:94vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:70px 26px}
+.hero .blob{position:absolute;border-radius:50%;filter:blur(2px)}
+.b1{width:360px;height:360px;background:var(--matcha);opacity:.45;top:-120px;right:-90px}
+.b2{width:240px;height:240px;background:var(--clay);opacity:.32;bottom:-80px;left:-70px}
+.b3{width:200px;height:200px;background:var(--matcha2);opacity:.3;bottom:60px;right:8%}
+.hero-in{position:relative;z-index:2;max-width:760px}
+.hero .chairs{width:130px;margin:0 auto 22px;display:block}
+.wm{font-family:var(--serif);font-weight:700;font-size:clamp(46px,11vw,104px);letter-spacing:.06em;line-height:.98}
+.beirut{font-family:var(--sans);font-weight:700;font-size:clamp(13px,2.6vw,17px);letter-spacing:.5em;color:var(--latte);margin:14px 0 4px;padding-left:.5em}
+.sub{font-family:var(--sans);font-weight:600;font-size:clamp(10px,2.2vw,13px);letter-spacing:.4em;color:#CFC8B8}
+.rule{width:64px;height:1px;background:var(--latte);opacity:.6;margin:24px auto 22px}
+.tag{font-family:var(--serif);font-style:italic;font-size:clamp(15px,3vw,20px);color:#E6DFCF;letter-spacing:.02em}
+.cta{display:inline-flex;gap:10px;align-items:center;margin-top:30px;background:var(--matcha2);color:var(--ink);font-weight:700;font-size:13px;letter-spacing:.04em;padding:13px 26px;border-radius:999px;text-decoration:none;transition:transform .2s,background .2s}
+.cta:hover{transform:translateY(-2px);background:#9CB86B}
+.scroll{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:2;color:#9AA488;font-size:22px;animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,7px)}}
+/* STATEMENT */
+.statement{padding:96px 0;text-align:center}
+.statement .k{font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--clay);font-weight:700;margin-bottom:18px}
+.statement h2{font-family:var(--serif);font-weight:600;font-size:clamp(26px,4.6vw,44px);line-height:1.18;max-width:760px;margin:0 auto;letter-spacing:-.01em}
+.statement .by{margin-top:18px;color:var(--muted);font-size:14px}
+/* PILLARS */
+.pillars{background:var(--cream);padding:84px 0}
+.pillars .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border-radius:18px;padding:34px 26px;text-align:center;box-shadow:0 8px 24px rgba(38,50,30,.06)}
+.card .ic{width:54px;height:54px;margin:0 auto 16px;display:flex;align-items:center;justify-content:center}
+.card .ic svg{width:46px;height:46px}
+.card h3{font-family:var(--serif);font-weight:700;font-size:22px;margin-bottom:8px}
+.card p{color:var(--muted);font-size:14.5px}
+/* WILD */
+.wild{padding:88px 0}
+.wild .k{font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--clay);font-weight:700;text-align:center;margin-bottom:10px}
+.wild h2{font-family:var(--serif);font-weight:700;font-size:clamp(26px,4.4vw,40px);text-align:center;margin-bottom:36px}
+.wild .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.shot{background:#fff;border:1px solid #ECE3D2;border-radius:18px;padding:14px;display:flex;align-items:center;justify-content:center}
+.shot svg{width:100%;height:auto;max-width:220px}
+/* SIGNUP */
+.signup{background:var(--ink);color:var(--cream);padding:90px 26px;text-align:center}
+.signup h2{font-family:var(--serif);font-weight:700;font-size:clamp(28px,5vw,46px);margin-bottom:12px}
+.signup p{color:#CFC8B8;max-width:480px;margin:0 auto 26px;font-size:15px}
+.form{display:flex;gap:10px;max-width:440px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+.form input{flex:1;min-width:200px;padding:14px 18px;border-radius:999px;border:1px solid #46543B;background:#2E3D29;color:var(--cream);font-family:var(--sans);font-size:14px}
+.form input::placeholder{color:#9AA488}
+.form button{padding:14px 26px;border-radius:999px;border:0;background:var(--latte);color:var(--ink);font-family:var(--sans);font-weight:700;font-size:14px;cursor:pointer;transition:transform .2s}
+.form button:hover{transform:translateY(-2px)}
+.note{margin-top:16px;font-size:12px;color:#8A9479;letter-spacing:.04em}
+/* FOOTER */
+footer{background:#1F2A18;color:#CFC8B8;padding:44px 26px;text-align:center}
+footer .fchairs{width:64px;margin:0 auto 14px}
+footer .fwm{font-family:var(--serif);font-weight:700;letter-spacing:.16em;color:var(--cream);font-size:22px}
+footer .fb{font-family:var(--sans);font-weight:700;letter-spacing:.4em;font-size:10px;color:var(--latte);margin-top:4px}
+footer .fsub{font-size:10px;letter-spacing:.34em;color:#8A9479;margin-top:12px}
+footer .cprt{font-size:11px;color:#6E785E;margin-top:18px}
+@media(max-width:760px){.pillars .grid,.wild .grid{grid-template-columns:1fr}.statement{padding:70px 0}}
+@media(prefers-reduced-motion:reduce){.scroll{animation:none}.cta:hover{transform:none}}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <div class="hero-in">
+    <div class="chairs"><svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg"><g transform="translate(64,96) scale(1,1)" fill="none" stroke="#F3ECDD" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M-2 -44 Q-8 -20 -2 4"/><path d="M8 -42 Q3 -20 8 4"/><path d="M-2 -44 L8 -42"/><path d="M-1 -26 L7 -25"/><path d="M-2 4 L30 4"/><path d="M0 4 L-5 34"/><path d="M28 4 L33 34"/></g><g transform="translate(110,72) scale(1)" fill="none" stroke="#F3ECDD" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><ellipse rx="13" ry="3.2"/><path d="M0 3 L0 36"/><path d="M-11 40 Q0 46 11 40"/></g><g transform="translate(110,58) scale(1)" fill="none" stroke="#F3ECDD" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M-5 0 L-4 7 Q0 9 4 7 L5 0"/><path d="M5 1 Q9 2 7 5"/></g><g transform="translate(156,96) scale(-1,1)" fill="none" stroke="#F3ECDD" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M-2 -44 Q-8 -20 -2 4"/><path d="M8 -42 Q3 -20 8 4"/><path d="M-2 -44 L8 -42"/><path d="M-1 -26 L7 -25"/><path d="M-2 4 L30 4"/><path d="M0 4 L-5 34"/><path d="M28 4 L33 34"/></g></svg></div>
+    <div class="wm">STRANGERS</div>
+    <div class="beirut">BEIRUT</div>
+    <div class="sub">COFFEE&nbsp;&nbsp;·&nbsp;&nbsp;MATCHA&nbsp;&nbsp;·&nbsp;&nbsp;COMMUNITY</div>
+    <div class="rule"></div>
+    <div class="tag">A stranger is someone we haven’t embraced yet.</div>
+    <a class="cta" href="#join">Join the table →</a>
+  </div>
+  <div class="scroll">↓</div>
+</section>
+
+<section class="statement shell">
+  <div class="k">Our idea</div>
+  <h2>We don’t just serve coffee. We serve belonging — a place in Beirut where strangers become friends over real conversations.</h2>
+  <div class="by">Come as a stranger. Leave as part of something.</div>
+</section>
+
+<section class="pillars">
+  <div class="shell grid">
+    <div class="card"><div class="ic"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#4E6B36" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 18 h22 v10 a8 8 0 0 1 -8 8 h-6 a8 8 0 0 1 -8 -8 z"/><path d="M34 20 h4 a4 4 0 0 1 0 8 h-3"/><path d="M18 8 c-2 3 2 4 0 7 M26 8 c-2 3 2 4 0 7"/></svg></div><h3>Coffee</h3><p>Specialty cups, pulled slow, made for sitting and staying a while.</p></div>
+    <div class="card"><div class="ic"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><g transform="translate(24,24) scale(1)"><path d="M0 -23 C15 -13 15 13 0 23 C-15 13 -15 -13 0 -23 Z" fill="#4E6B36"/><path d="M0 -17 L0 17" stroke="#FBF8F1" stroke-width="2.6" stroke-linecap="round"/><path d="M0 -7 L8 -13 M0 3 L8 -3 M0 -7 L-8 -13 M0 3 L-8 -3" stroke="#FBF8F1" stroke-width="2" stroke-linecap="round"/></g></svg></div><h3>Matcha</h3><p>Stone-ground, ceremonial-grade green — calm in a cup.</p></div>
+    <div class="card"><div class="ic"><svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg"><g transform="translate(64,96) scale(1,1)" fill="none" stroke="#4E6B36" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M-2 -44 Q-8 -20 -2 4"/><path d="M8 -42 Q3 -20 8 4"/><path d="M-2 -44 L8 -42"/><path d="M-1 -26 L7 -25"/><path d="M-2 4 L30 4"/><path d="M0 4 L-5 34"/><path d="M28 4 L33 34"/></g><g transform="translate(110,72) scale(1)" fill="none" stroke="#4E6B36" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><ellipse rx="13" ry="3.2"/><path d="M0 3 L0 36"/><path d="M-11 40 Q0 46 11 40"/></g><g transform="translate(110,58) scale(1)" fill="none" stroke="#4E6B36" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M-5 0 L-4 7 Q0 9 4 7 L5 0"/><path d="M5 1 Q9 2 7 5"/></g><g transform="translate(156,96) scale(-1,1)" fill="none" stroke="#4E6B36" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M-2 -44 Q-8 -20 -2 4"/><path d="M8 -42 Q3 -20 8 4"/><path d="M-2 -44 L8 -42"/><path d="M-1 -26 L7 -25"/><path d="M-2 4 L30 4"/><path d="M0 4 L-5 34"/><path d="M28 4 L33 34"/></g></svg></div><h3>Community</h3><p>Shared tables, conversation cards and weekly nights to meet new people.</p></div>
+  </div>
+</section>
+
+<section class="wild shell">
+  <div class="k">In the wild</div>
+  <h2>One mark, everywhere</h2>
+  <div class="grid">
+    <div class="shot"><svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+ <rect x="20" y="14" width="6" height="40" fill="#3a3a3a"/><rect x="20" y="14" width="60" height="6" fill="#3a3a3a"/>
+ <rect x="108" y="56" width="4" height="14" fill="#3a3a3a"/>
+ <circle cx="110" cy="120" r="64" fill="#4E6B36"/>
+ <g transform="translate(110,100) scale(0.46)"><g transform="translate(-108,-89)"><g transform="translate(64,96) scale(1,1)" fill="none" stroke="#F3ECDD" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M-2 -44 Q-8 -20 -2 4"/><path d="M8 -42 Q3 -20 8 4"/><path d="M-2 -44 L8 -42"/><path d="M-1 -26 L7 -25"/><path d="M-2 4 L30 4"/><path d="M0 4 L-5 34"/><path d="M28 4 L33 34"/></g><g transform="translate(110,72) scale(1)" fill="none" stroke="#F3ECDD" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><ellipse rx="13" ry="3.2"/><path d="M0 3 L0 36"/><path d="M-11 40 Q0 46 11 40"/></g><g transform="translate(110,58) scale(1)" fill="none" stroke="#F3ECDD" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M-5 0 L-4 7 Q0 9 4 7 L5 0"/><path d="M5 1 Q9 2 7 5"/></g><g transform="translate(156,96) scale(-1,1)" fill="none" stroke="#F3ECDD" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M-2 -44 Q-8 -20 -2 4"/><path d="M8 -42 Q3 -20 8 4"/><path d="M-2 -44 L8 -42"/><path d="M-1 -26 L7 -25"/><path d="M-2 4 L30 4"/><path d="M0 4 L-5 34"/><path d="M28 4 L33 34"/></g></g></g>
+ <text x="110" y="150" text-anchor="middle" font-family="Playfair Display,Georgia,serif" font-size="13" font-weight="700" letter-spacing="1.6" fill="#F3ECDD">STRANGERS</text></svg></div>
+    <div class="shot"><svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+ <path d="M58 50 L142 50 L132 178 Q132 184 126 184 L74 184 Q68 184 68 178 Z" fill="#4E6B36"/>
+ <rect x="54" y="42" width="92" height="12" rx="4" fill="#8BA85A"/>
+ <g transform="translate(100,104) scale(0.34)"><g transform="translate(-108,-89)"><g transform="translate(64,96) scale(1,1)" fill="none" stroke="#F3ECDD" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M-2 -44 Q-8 -20 -2 4"/><path d="M8 -42 Q3 -20 8 4"/><path d="M-2 -44 L8 -42"/><path d="M-1 -26 L7 -25"/><path d="M-2 4 L30 4"/><path d="M0 4 L-5 34"/><path d="M28 4 L33 34"/></g><g transform="translate(110,72) scale(1)" fill="none" stroke="#F3ECDD" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><ellipse rx="13" ry="3.2"/><path d="M0 3 L0 36"/><path d="M-11 40 Q0 46 11 40"/></g><g transform="translate(110,58) scale(1)" fill="none" stroke="#F3ECDD" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M-5 0 L-4 7 Q0 9 4 7 L5 0"/><path d="M5 1 Q9 2 7 5"/></g><g transform="translate(156,96) scale(-1,1)" fill="none" stroke="#F3ECDD" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M-2 -44 Q-8 -20 -2 4"/><path d="M8 -42 Q3 -20 8 4"/><path d="M-2 -44 L8 -42"/><path d="M-1 -26 L7 -25"/><path d="M-2 4 L30 4"/><path d="M0 4 L-5 34"/><path d="M28 4 L33 34"/></g></g></g>
+ <text x="100" y="150" text-anchor="middle" font-family="Playfair Display,Georgia,serif" font-size="9" font-weight="700" letter-spacing="0.6" fill="#F3ECDD">STRANGERS</text></svg></div>
+    <div class="shot"><svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+ <path d="M52 60 L148 60 L154 184 L46 184 Z" fill="#E9E2D2"/>
+ <path d="M74 60 C74 38 92 34 100 34 C108 34 126 38 126 60" fill="none" stroke="#cfc6b2" stroke-width="5"/>
+ <g transform="translate(100,104) scale(0.34)"><g transform="translate(-108,-89)"><g transform="translate(64,96) scale(1,1)" fill="none" stroke="#26321E" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M-2 -44 Q-8 -20 -2 4"/><path d="M8 -42 Q3 -20 8 4"/><path d="M-2 -44 L8 -42"/><path d="M-1 -26 L7 -25"/><path d="M-2 4 L30 4"/><path d="M0 4 L-5 34"/><path d="M28 4 L33 34"/></g><g transform="translate(110,72) scale(1)" fill="none" stroke="#26321E" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><ellipse rx="13" ry="3.2"/><path d="M0 3 L0 36"/><path d="M-11 40 Q0 46 11 40"/></g><g transform="translate(110,58) scale(1)" fill="none" stroke="#26321E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M-5 0 L-4 7 Q0 9 4 7 L5 0"/><path d="M5 1 Q9 2 7 5"/></g><g transform="translate(156,96) scale(-1,1)" fill="none" stroke="#26321E" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M-2 -44 Q-8 -20 -2 4"/><path d="M8 -42 Q3 -20 8 4"/><path d="M-2 -44 L8 -42"/><path d="M-1 -26 L7 -25"/><path d="M-2 4 L30 4"/><path d="M0 4 L-5 34"/><path d="M28 4 L33 34"/></g></g></g>
+ <text x="100" y="150" text-anchor="middle" font-family="Playfair Display,Georgia,serif" font-size="11.5" font-weight="700" letter-spacing="2" fill="#26321E">STRANGERS</text></svg></div>
+  </div>
+</section>
+
+<section class="signup" id="join">
+  <h2>Opening soon in Beirut</h2>
+  <p>Be the first through the door. Leave your email and we’ll save you a seat at the table.</p>
+  <form class="form" onsubmit="event.preventDefault();this.querySelector('input').value='';this.querySelector('button').textContent='Saved a seat ✓';">
+    <input type="email" placeholder="you@email.com" required aria-label="Email">
+    <button type="submit">Keep me posted</button>
+  </form>
+  <div class="note">No spam. Just a hello when we open.</div>
+</section>
+
+<footer>
+  <div class="fchairs"><svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg"><g transform="translate(64,96) scale(1,1)" fill="none" stroke="#F3ECDD" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M-2 -44 Q-8 -20 -2 4"/><path d="M8 -42 Q3 -20 8 4"/><path d="M-2 -44 L8 -42"/><path d="M-1 -26 L7 -25"/><path d="M-2 4 L30 4"/><path d="M0 4 L-5 34"/><path d="M28 4 L33 34"/></g><g transform="translate(110,72) scale(1)" fill="none" stroke="#F3ECDD" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><ellipse rx="13" ry="3.2"/><path d="M0 3 L0 36"/><path d="M-11 40 Q0 46 11 40"/></g><g transform="translate(110,58) scale(1)" fill="none" stroke="#F3ECDD" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M-5 0 L-4 7 Q0 9 4 7 L5 0"/><path d="M5 1 Q9 2 7 5"/></g><g transform="translate(156,96) scale(-1,1)" fill="none" stroke="#F3ECDD" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M-2 -44 Q-8 -20 -2 4"/><path d="M8 -42 Q3 -20 8 4"/><path d="M-2 -44 L8 -42"/><path d="M-1 -26 L7 -25"/><path d="M-2 4 L30 4"/><path d="M0 4 L-5 34"/><path d="M28 4 L33 34"/></g></svg></div>
+  <div class="fwm">STRANGERS</div>
+  <div class="fb">BEIRUT</div>
+  <div class="fsub">COFFEE · MATCHA · COMMUNITY</div>
+  <div class="cprt">© 2025 Strangers · Beirut, Lebanon</div>
+</footer>
+
+</body>
+</html>
